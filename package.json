@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "git@github.com:TheYakuza/silabas-random.git",
   "author": "Nicolas Martinez V <nicolas.martinez@karibu.cl>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
 }
