@@ -2138,5 +2138,9 @@ const listado = ["a",
     "zum",
     "zun",
     "zur",
-    "zuz"];
-export default lisado;
+    "zuz",
+  ];
+
+module.exports = {
+  listado,
+};

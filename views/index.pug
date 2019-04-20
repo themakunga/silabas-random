@@ -4,16 +4,17 @@ html(lang='es')
     title randomizador de silabas
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css')
   body
-    .level
     .container
       .level
         h1.title Randomizador de Silabas
-      .level.is-fullwidth
-        .box.is-fullwidth
-          .field
-            label.label Ingrese Cantidad de Silabas
-            .control
-              input.input(type='number' min='2' max='6')
-          .field
-            button.button Generar!
       .level
+        .columns
+          .column
+            form(method='POST' action='/')
+              .field
+                label.label cuantas?
+              .control
+                input.input(type='number' min='2' max='6' name='num' value=quantity)
+                button.button(type='submit') Generar!
+          .column
+            | #{result}
