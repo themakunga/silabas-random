@@ -17,4 +17,8 @@ html(lang='es')
                 input.input(type='number' min='1' max='6' name='num' value=quantity)
                 button.button(type='submit') Generar!
           .column
-            | #{result}
+            .container
+              ul
+                if result
+                  each name in result
+                    li= name

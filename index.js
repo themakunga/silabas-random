@@ -20,14 +20,19 @@ const { listado } = require('./listado');
 
 app.post('/', (req, res) => {
   const num = parseInt(req.body.num, 10);
-  let nickname = '';
-  let counter = 0;
-  while (counter < num) {
-    nickname += listado[Math.floor(Math.random() * listado.length)];
-    counter += 1;
+  const arr = [];
+  for (let i = 0; i < 5; i++) {
+    let counter = 0;
+    let nickname = '';
+    while (counter < num) {
+      nickname += listado[Math.floor(Math.random() * listado.length)];
+      counter += 1;
+    }
+    arr.push(nickname);
   }
-
-  res.render('index', { result: nickname, quantity: num });
+  console.log(arr);
+  
+  res.render('index', { result: arr, quantity: num });
 });
 
 app.listen(port, function () {
